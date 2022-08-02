@@ -13,8 +13,9 @@ curl -O https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
 
-branch=`echo "${env_name}"| tr '[:upper:]' '[:lower:]'`
-git clone --single-branch --branch $branch https://github.com/vinycoolguy2015/nodejs-mysql-crud.git
+#branch=`echo "${env_name}"| tr '[:upper:]' '[:lower:]'`
+branch=master
+git clone https://github.com/Jhaggar/nodejs-mysql-crud.git
 #rds_hostname=`aws rds describe-db-instances --region us-east-1 |jq [.DBInstances[0].Endpoint.Address][0]| tr -d '"'`
 rds_hostname=`aws rds describe-db-instances --region us-east-1 --db-instance-identifier="${env_name}-${rds_name}"|jq [.DBInstances[0].Endpoint.Address][0]| tr -d '"'`
 
@@ -25,4 +26,3 @@ rds_hostname=`aws rds describe-db-instances --region us-east-1 --db-instance-ide
 cd nodejs-mysql-crud
 sed -i "s/localhost/$rds_hostname/g" config.js
 node app.js
-
