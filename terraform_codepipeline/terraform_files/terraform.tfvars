@@ -19,6 +19,6 @@ environments = {
   environment2 = "UAT"
   environment3 = "Production"
 }
-repository_owner = "vinycoolguy2015"
+repository_owner = "Jhaggar"
 repository_name  = "nodejs-mysql-crud"
-github_token     = "e"
+github_token     = "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"
