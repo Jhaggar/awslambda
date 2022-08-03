@@ -15,7 +15,7 @@ sudo ./install auto
 
 branch=`echo "${env_name}"| tr '[:upper:]' '[:lower:]'`
 #branch=master
-git clone --single-branch --branch $branch https://github.com/vinycoolguy2015/nodejs-mysql-crud.git
+git clone --single-branch --branch $branch https://github.com/Jhaggar/nodejs-mysql-crud.git
 #rds_hostname=`aws rds describe-db-instances --region us-east-1 |jq [.DBInstances[0].Endpoint.Address][0]| tr -d '"'`
 rds_hostname=`aws rds describe-db-instances --region us-east-1 --db-instance-identifier="${env_name}-${rds_name}"|jq [.DBInstances[0].Endpoint.Address][0]| tr -d '"'`
 
