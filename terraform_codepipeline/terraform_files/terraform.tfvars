@@ -16,8 +16,8 @@ lowcpu                   = 40
 userdata                 = "../script.tpl"
 environments = {
   environment1 = "Dev"
-  environment2 = "UAT"
-  environment3 = "Production"
+  # environment2 = "UAT"
+  # environment3 = "Production"
 }
 repository_owner = "Jhaggar"
 repository_name  = "nodejs-mysql-crud"
